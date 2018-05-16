@@ -29,7 +29,7 @@ fi
 
 ### Get your terminal looking pretty pt.2
 - Install Oh My Zsh with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-  - Read docs [here](https://github.com/robbyrussell/oh-my-zsh) on how to add more plugins and change themes (I went with their out of the box 'robbyrussell').
+  - Read docs [here](https://github.com/robbyrussell/oh-my-zsh) on how to add more plugins and change themes (I went with '[hyperzsh](https://github.com/tylerreckart/hyperzsh)').
   
 ### Zsh Syntax Highlighting
 This was a late addition but is an amazing add-on to the terminal. Follow the steps [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) to get it up and running.
@@ -78,6 +78,19 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; the
   }
   for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
+```
+
+### Install Yarn
+IMO Yarn is better than NPM 
+
+- Add the Yarn repository to your local machine
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list | bash
+```
+- After that just run (we need the `--no-install-recommends` because we use nvm for node)
+```
+sudo apt-get -y install --no-install-recommends yarn
 ```
 
 ### Install Gulp CLI
