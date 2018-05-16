@@ -93,6 +93,15 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get -y install --no-install-recommends yarn
 ```
 
+### Install Openshift CLI
+
+Best I could do for now
+
+```
+wget https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
+tar xvzf openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
+mv openshift-origin-client-tools-v3.9.0-191fece-linux-64bit/oc /usr/local/bin
+```
 ### Install Gulp CLI
 - Follow the Gulp docs [here](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
 
