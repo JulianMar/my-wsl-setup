@@ -102,8 +102,24 @@ wget https://github.com/openshift/origin/releases/download/v3.9.0/openshift-orig
 tar xvzf openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
 mv openshift-origin-client-tools-v3.9.0-191fece-linux-64bit/oc /usr/local/bin
 ```
-### Install Gulp CLI
-- Follow the Gulp docs [here](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
+### Install PHP
+
+Install PHP for Composer and running phpunit tests locally
+```
+sudo apt-get install apt-transport-https lsb-release ca-certificates
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+sudo apt-get update
+sudo apt-get install php7.2-cli
+```
+
+### Install Composer
+
+```
+php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');"
+sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+
 
 ### Aliases
 Just to test out using aliases, I picked a few things I type a lot into the terminal that could save me some keystrokes. Add this to your .zshrc file to do the same and add anything else you see fit:
