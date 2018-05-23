@@ -54,6 +54,7 @@ compinit
 - Then run `sudo apt install git`
 
 ### Setup a SSH key and link to your Github
+- `git config --global credential.helper "/mnt/c/Tools/Git/mingw64/libexec/git-core/git-credential-wincred.exe"`
 - Follow the Linux steps [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux) to create a key and add it to your SSH agent
 - Then type `cat ~/.ssh/id_rsa.pub`
 - Copy your key from the terminal and paste it into your Github keys
