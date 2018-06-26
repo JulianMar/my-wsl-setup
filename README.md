@@ -94,6 +94,8 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get -y install --no-install-recommends yarn
 ```
 
+If you run into Problems checkout this issue [#3189](https://github.com/yarnpkg/yarn/issues/3189)
+
 ### Install Openshift CLI
 
 Best I could do for now
