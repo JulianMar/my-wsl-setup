@@ -87,7 +87,7 @@ IMO Yarn is better than NPM
 - Add the Yarn repository to your local machine
 ```
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list | bash
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 - After that just run (we need the `--no-install-recommends` because we use nvm for node)
 ```
